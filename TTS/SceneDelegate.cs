@@ -2,7 +2,7 @@
 using Foundation;
 using UIKit;
 
-namespace NewSingleViewTemplate
+namespace mintyfusion.studio.xamarin.ios.TTS
 {
     [Register("SceneDelegate")]
     public class SceneDelegate : UIResponder, IUIWindowSceneDelegate

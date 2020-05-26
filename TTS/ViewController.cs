@@ -1,9 +1,13 @@
-﻿using Foundation;
-using System;
-using UIKit;
-
-namespace TTS
+﻿namespace mintyfusion.studio.xamarin.ios.TTS
 {
+    #region Namespace
+    using AVFoundation;
+    using Foundation;
+    using System;
+    using UIKit;
+    #endregion
+
+    #region Class
     public partial class ViewController : UIViewController, IUIPickerViewDataSource, IUIPickerViewDelegate
     {
         #region Constructor
@@ -20,6 +24,7 @@ namespace TTS
             pickerView.DataSource = this;
             pickerView.WeakDelegate = this;
 
+            // TextField events to resign keyboard
             textField.ShouldReturn += (sender) =>
             {
                 textField.ResignFirstResponder();
@@ -27,6 +32,7 @@ namespace TTS
                 return true;
             };
 
+            // speakButton click event to perform text to speech
             speakButton.TouchUpInside += (sender, e) =>
             {
                 textField.ResignFirstResponder();
@@ -50,7 +56,7 @@ namespace TTS
 
         public nint GetRowsInComponent(UIPickerView pickerView, nint component)
         {
-            var voices = TextToSpeech.SharedInstance.GetVoices();
+            AVSpeechSynthesisVoice[] voices = TextToSpeech.SharedInstance.GetVoices();
 
             return voices.Length;
         }
@@ -58,7 +64,7 @@ namespace TTS
         [Export("pickerView:titleForRow:forComponent:")]
         public string GetTitle(UIPickerView pickerView, nint row, nint component)
         {
-            var voices = TextToSpeech.SharedInstance.GetVoices();
+            AVSpeechSynthesisVoice[] voices = TextToSpeech.SharedInstance.GetVoices();
 
             return voices[row].Name;
         }
@@ -78,4 +84,5 @@ namespace TTS
         }
         #endregion
     }
+    #endregion
 }

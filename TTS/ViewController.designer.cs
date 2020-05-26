@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace TTS
+namespace mintyfusion.studio.xamarin.ios.TTS
 {
 	[Register ("ViewController")]
 	partial class ViewController

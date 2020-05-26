@@ -1,4 +1,4 @@
-﻿namespace TTS
+﻿namespace mintyfusion.studio.xamarin.ios.TTS
 {
     #region Namespace
     using AVFoundation;

@@ -1,6 +1,6 @@
 ﻿using UIKit;
 
-namespace TTS
+namespace mintyfusion.studio.xamarin.ios.TTS
 {
     public class Application
     {
