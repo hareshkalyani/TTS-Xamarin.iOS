@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijl-lc-PgZ">
+                                <rect key="frame" x="0.0" y="646" width="414" height="216"/>
+                            </pickerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFy-24-RoB">
+                                <rect key="frame" x="0.0" y="602" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ppr-kl-0RL"/>
+                                    <barButtonItem title="Voices" id="bCz-C2-Lxh"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ogQ-mf-Buo"/>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKg-3x-viK">
+                                <rect key="frame" x="40" y="144" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lP0-hM-nJw">
+                                <rect key="frame" x="172" y="228" width="70" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="CmA-FU-CY1"/>
+                                    <constraint firstAttribute="height" constant="40" id="XNC-yl-fY8"/>
+                                </constraints>
+                                <state key="normal" title="Speak"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YFy-24-RoB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="39W-ar-482"/>
+                            <constraint firstItem="ijl-lc-PgZ" firstAttribute="top" secondItem="YFy-24-RoB" secondAttribute="bottom" id="4Ab-fy-60g"/>
+                            <constraint firstAttribute="trailing" secondItem="YFy-24-RoB" secondAttribute="trailing" id="ANO-JS-r4W"/>
+                            <constraint firstItem="lP0-hM-nJw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DzO-yj-dDK"/>
+                            <constraint firstAttribute="trailing" secondItem="ijl-lc-PgZ" secondAttribute="trailing" id="Eag-5M-6aX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LKg-3x-viK" secondAttribute="trailing" constant="20" id="FdB-EF-rIG"/>
+                            <constraint firstItem="LKg-3x-viK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Nc9-XU-KBA"/>
+                            <constraint firstItem="ijl-lc-PgZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Wur-Ar-1nm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ijl-lc-PgZ" secondAttribute="bottom" id="vqa-Qf-Cz2"/>
+                            <constraint firstItem="lP0-hM-nJw" firstAttribute="top" secondItem="LKg-3x-viK" secondAttribute="bottom" constant="50" id="xMp-Aa-u9Z"/>
+                            <constraint firstItem="LKg-3x-viK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="xOC-9a-dQu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="ijl-lc-PgZ" id="IMO-Io-hhB"/>
+                        <outlet property="speakButton" destination="lP0-hM-nJw" id="bm5-Tb-vrb"/>
+                        <outlet property="textField" destination="LKg-3x-viK" id="YqR-Ax-7Wi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
