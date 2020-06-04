@@ -79,7 +79,6 @@
 
             this.audioFinishHandler = audioFinishHandler;
 
-            // Play with Default Voice
             IsPlaying = true;
 
             AVAudioSession.SharedInstance().SetCategory(AVAudioSessionCategory.PlayAndRecord,
